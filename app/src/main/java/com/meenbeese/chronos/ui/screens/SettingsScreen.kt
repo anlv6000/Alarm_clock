@@ -96,8 +96,12 @@ fun SettingsScreen(
                         ImageFilePreference(
                             preference = Preferences.BACKGROUND_IMAGE,
                             title = R.string.title_background_image,
-                            description = R.string.desc_background_image
+                            description = R.string.desc_background_image,
+                            onFileChosen = {
+                                triggerRebuild++
+                            }
                         )
+
                     }
                 }
             )

@@ -178,7 +178,7 @@ class HomeFragment : BaseFragment() {
                                 isTablet = true,
                                 initialTabIndex = selectedTabIndex.intValue,
                                 onTabChanged = { selectedTabIndex.intValue = it },
-                                heightFraction = 0.5f + 0.035f // Cover rounded edges
+                                heightFraction = 0.25f + 0.035f
                             ) { page ->
                                 if (page == 0) {
                                     AlarmsScreen(
@@ -212,7 +212,7 @@ class HomeFragment : BaseFragment() {
                             fragments = clockScreens,
                             backgroundPainter = clockBackground!!,
                             pageIndicatorVisible = clockScreens.size > 1,
-                            modifier = Modifier.Companion.fillMaxHeight(0.5f)
+                            modifier = Modifier.fillMaxHeight(0.75f)
                         )
 
                         HomeBottomSheet(
@@ -220,7 +220,7 @@ class HomeFragment : BaseFragment() {
                             isTablet = false,
                             initialTabIndex = selectedTabIndex.intValue,
                             onTabChanged = { selectedTabIndex.intValue = it },
-                            heightFraction = 0.5f + 0.035f // Cover rounded edges
+                            heightFraction = 0.25f + 0.035f
                         ) { page ->
                             if (page == 0) {
                                 AlarmsScreen(
@@ -249,12 +249,12 @@ class HomeFragment : BaseFragment() {
 
                 if (selectedTabIndex.intValue == 0) {
                     Box(
-                        modifier = Modifier.Companion
+                        modifier = Modifier
                             .fillMaxSize()
-                            .padding(12.dp)
+                            .padding(3.dp)
                     ) {
                         AnimatedFabMenu(
-                            icon = R.drawable.ic_add,
+                            icon = R.drawable.echnhay,
                             text = R.string.title_create,
                             items = listOf(
                                 timerItem,
@@ -268,7 +268,7 @@ class HomeFragment : BaseFragment() {
                                     alarmItem -> showAlarmDialog = true
                                 }
                             },
-                            modifier = Modifier.Companion.align(Alignment.Companion.BottomEnd)
+                            modifier = Modifier.align(Alignment.BottomEnd)
                         )
                     }
                 }

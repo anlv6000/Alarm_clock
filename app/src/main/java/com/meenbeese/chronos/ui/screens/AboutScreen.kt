@@ -74,7 +74,7 @@ fun AboutScreen(
         Image(
             painter = rememberAsyncImagePainter(
                 ImageRequest.Builder(context)
-                    .data(R.mipmap.ic_launcher_round)
+                    .data(R.drawable.tym)
                     .transformations(CircleCropTransformation())
                     .build()
             ),
@@ -133,7 +133,7 @@ fun AboutScreen(
                 }
             )
             Text(
-                text = " in Canada.",
+                text = " for you!!",
                 style = textStyle16,
             )
         }
@@ -152,35 +152,6 @@ fun AboutScreen(
                 .padding(top = 44.dp)
         )
 
-        Column(
-            modifier = Modifier
-                .align(Alignment.CenterHorizontally)
-                .padding(bottom = 24.dp)
-        ) {
-            EngagementItem(
-                iconRes = R.drawable.ic_github,
-                label = stringResource(R.string.fork_github),
-                color = MaterialTheme.colorScheme.primary
-            ) {
-                onOpenUrl("https://github.com/meenbeese/Chronos")
-            }
-
-            EngagementItem(
-                iconRes = R.drawable.ic_link,
-                label = stringResource(R.string.visit_website),
-                color = MaterialTheme.colorScheme.primary
-            ) {
-                onOpenUrl("https://kuzey.is-a.dev")
-            }
-
-            EngagementItem(
-                iconRes = R.drawable.ic_email,
-                label = stringResource(R.string.send_email),
-                color = MaterialTheme.colorScheme.primary
-            ) {
-                onSendEmail("kuzeybilgin@proton.me")
-            }
-        }
 
         EngagementItem(
             iconRes = R.drawable.ic_copyright,
