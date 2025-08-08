@@ -1,6 +1,8 @@
-# Đường dẫn đến repo
 $repoPath = "D:\Xmax\Alarm_clock\Alarm_clock"
 cd $repoPath
+
+# Đồng bộ với remote
+git pull origin main
 
 # Kiểm tra thay đổi
 $changes = git status --porcelain
